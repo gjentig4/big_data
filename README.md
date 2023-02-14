@@ -18,7 +18,7 @@ import pandas as pd
 # Load the homelessness data
 homelessness = pd.read_csv("homelessness.csv")
 ```
-##Analyze the Data
+## Analyze the Data
 ```
 # Print the values of the homelessness data
 print(homelessness.values)
@@ -29,7 +29,7 @@ print(homelessness.columns)
 # Print the row index of the homelessness data
 print(homelessness.index)
 ```
-##Sort the Data
+## Sort the Data
 ```
 # Sort the homelessness data by the number of individuals, in ascending order
 homelessness_ind = homelessness.sort_values("individuals", ascending=True)
