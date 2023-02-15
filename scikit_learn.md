@@ -132,5 +132,56 @@ for c in classifiers:
 plot_4_classifiers(X, y, classifiers)
 plt.show()
 
+------------------------------------------------
+Changing the model coefficients
+When you call fit with scikit-learn, the logistic regression coefficients are automatically learned from your dataset. In this exercise you will explore how the decision boundary is represented by the coefficients. To do so, you will change the coefficients manually (instead of with fit), and visualize the resulting classifiers.
+
+A 2D dataset is already loaded into the environment as X and y, along with a linear classifier object model.
+
+Set the two coefficients and the intercept to various values and observe the resulting decision boundaries.
+Try to build up a sense of how the coefficients relate to the decision boundary.
+Set the coefficients and intercept such that the model makes no errors on the given training data.
+
+import numpy as np
+# Set the coefficients
+model.coef_ = np.array([[-1,3]])
+model.intercept_ = np.array([-6])
+
+# Plot the data and decision boundary
+plot_classifier(X,y,model)
+
+# Print the number of errors
+num_err = np.sum(y != model.predict(X))
+print("Number of errors:", num_err)
 
 
+--------------------------------------
+Minimizing a loss function
+In this exercise you'll implement linear regression "from scratch" using scipy.optimize.minimize.
+
+We'll train a model on the Boston housing price data set, which is already loaded into the variables X and y. For simplicity, we won't include an intercept in our regression model.
+
+
+Fill in the loss function for least squares linear regression.
+Print out the coefficients from fitting sklearn's LinearRegression.
+
+from sklearn.linear_model import LinearRegression
+from scipy.optimize import minimize
+
+# The squared error, summed over training examples
+def my_loss(w):
+    s = 0
+    for i in range(y.size):
+        # Get the true and predicted target values for example 'i'
+        y_i_true = y[i]
+        y_i_pred = w@X[i]
+        s = s + (y_i_true - y_i_pred)**2
+    return s
+
+# Returns the w that makes my_loss(w) smallest
+w_fit = minimize(my_loss, X[0]).x
+print(w_fit)
+
+# Compare with scikit-learn's LinearRegression coefficients
+lr = LinearRegression(fit_intercept=False).fit(X,y)
+print(lr.coef_)
