@@ -3,11 +3,12 @@
 Switch to the workbench view when using MySQL. (For Postgres, you could use
 pgAdmin, for SQLite the DB Browser) and write the following SQL queries:
 
+
+### a. Return all records with state ‘MA’
 ```
-# a. Return all records with state ‘MA’
 SELECT * FROM population WHERE state = 'MA';
-
-
+```
+```
 # b. Count the number of records(=cities) for the state ‘MA’
 SELECT COUNT(*) 
 FROM population
