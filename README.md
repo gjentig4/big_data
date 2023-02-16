@@ -1,6 +1,6 @@
 # Big Data
 
-This is a brief guide on how to sort and analyze homelessness data using the Pandas library in Python.
+This is a brief guide on how to fck around with the Pandas and other libraries library in Python.
 
 ## Prerequisites
 
