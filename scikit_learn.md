@@ -101,8 +101,8 @@ classification: learning to predict categories
 linear classifier: a classifier that learns linear decision
 boundaries
 o e.g., logistic regression, linear SVM
-linearly separable: a data set can be perfectly explained by
-a linear classifier
+linearly separable: a data set can be perfectly explained by a linear classifier
+
 --------------------------------------------
 In this exercise, you'll visualize the decision boundaries of various classifier types.
 
@@ -128,9 +128,9 @@ plot_4_classifiers(X, y, classifiers)
 plt.show()
 ```
 ------------------------------------------------
-Changing the model coefficients
-When you call fit with scikit-learn, the logistic regression coefficients are automatically learned from your dataset. In this exercise you will explore how the decision boundary is represented by the coefficients. To do so, you will change the coefficients manually (instead of with fit), and visualize the resulting classifiers.
+### Changing the model coefficients
 
+When you call fit with scikit-learn, the logistic regression coefficients are automatically learned from your dataset. In this exercise you will explore how the decision boundary is represented by the coefficients. To do so, you will change the coefficients manually (instead of with fit), and visualize the resulting classifiers.
 A 2D dataset is already loaded into the environment as X and y, along with a linear classifier object model.
 
 Set the two coefficients and the intercept to various values and observe the resulting decision boundaries.
@@ -151,7 +151,8 @@ print("Number of errors:", num_err)
 ```
 
 --------------------------------------
-Minimizing a loss function
+### Minimizing a loss function
+
 In this exercise you'll implement linear regression "from scratch" using scipy.optimize.minimize.
 
 We'll train a model on the Boston housing price data set, which is already loaded into the variables X and y. For simplicity, we won't include an intercept in our regression model.
@@ -182,7 +183,8 @@ lr = LinearRegression(fit_intercept=False).fit(X,y)
 print(lr.coef_)
 ```
 ---------------------------------------------------------------
-Comparing the logistic and hinge losses
+### Comparing the logistic and hinge losses
+
 In this exercise you'll create a plot of the logistic and hinge losses using their mathematical expressions, which are provided to you.
 
 The loss function diagram from the video is shown on the right.
@@ -204,7 +206,7 @@ plt.show()
 ```
 --------------------------------------------------------------
 
-Implementing logistic regression
+### Implementing logistic regression
 This is very similar to the earlier exercise where you implemented linear regression "from scratch" using scipy.optimize.minimize. However, this time we'll minimize the logistic loss and compare with scikit-learn's LogisticRegression (we've set C to a large value to disable regularization; more on this in Chapter 3!).
 
 The log_loss() function from the previous exercise is already defined in your environment, and the sklearn breast cancer prediction dataset (first 10 features, standardized) is loaded into the variables X and y.
