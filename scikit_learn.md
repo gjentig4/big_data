@@ -1,3 +1,9 @@
+# Scikit Learn
+
+The following file is a summary of lessons from DataCamp's Scikit-learn course. Scikit-learn is a powerful and easy-to-use Python library for machine learning.
+
+-------------------------------------------------------
+
 ### KNN classification
 
 In this exercise you'll explore a subset of the Large Movie Review Dataset. The variables X_train, X_test, y_train, and y_test are already loaded into the environment. The X variables contain features based on the words in the movie reviews, and the y variables contain labels for whether the review sentiment is positive (+1) or negative (-1).
@@ -202,8 +208,6 @@ print(lr.coef_)
 ### Comparing the logistic and hinge losses
 
 In this exercise you'll create a plot of the logistic and hinge losses using their mathematical expressions, which are provided to you.
-
-The loss function diagram from the video is shown on the right.
 
 Evaluate the log_loss() and hinge_loss() functions at the grid points so that they are plotted.
 ```
