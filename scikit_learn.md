@@ -1,3 +1,13 @@
+### KNN classification
+
+In this exercise you'll explore a subset of the Large Movie Review Dataset. The variables X_train, X_test, y_train, and y_test are already loaded into the environment. The X variables contain features based on the words in the movie reviews, and the y variables contain labels for whether the review sentiment is positive (+1) or negative (-1).
+
+This course touches on a lot of concepts you may have forgotten, so if you ever need a quick refresher, download the scikit-learn Cheat Sheet and keep it handy!
+
+Create a KNN model with default hyperparameters.
+Fit the model.
+Print out the prediction for the test example 0.
+
 ```
 from sklearn.neighbors import KNeighborsClassifier
 
@@ -10,6 +20,8 @@ pred = knn.predict(X_test)[0]
 print("Prediction for test example 0:", pred)
 ```
 -----------------------------------------------------
+### Comparing models
+
 Compare k nearest neighbors classifiers with k=1 and k=5 on the handwritten digits data set, which is already loaded into the variables X_train, y_train, X_test, and y_test. You can set k with the n_neighbors parameter when creating the KNeighborsClassifier object, which is also already imported into the environment.
 
 Which model has a higher test accuracy?
@@ -41,6 +53,7 @@ Accuracy for k=5: 99.33%
 ```
 ---------------------------------------------------------
 ### Running LogisticRegression and SVC
+
 In this exercise, you'll apply logistic regression and a support vector machine to classify images of handwritten digit
 
 Apply logistic regression and SVM (using SVC()) to the handwritten digits data set using the provided train/validation split.
@@ -67,7 +80,8 @@ print('SVM - Validation accuracy:', svm.score(X_test, y_test))
 ```
 
 --------------------------------------------------
-Sentiment analysis for movie reviews
+### Sentiment analysis for movie reviews
+
 In this exercise you'll explore the probabilities outputted by logistic regression on a subset of the Large Movie Review Dataset.
 
 The variables X and y are already loaded into the environment. X contains features based on the number of times words appear in the movie reviews, and y contains labels for whether the review sentiment is positive (+1) or negative (-1).
@@ -104,6 +118,8 @@ o e.g., logistic regression, linear SVM
 linearly separable: a data set can be perfectly explained by a linear classifier
 
 --------------------------------------------
+### Visualizing decision boundaries
+
 In this exercise, you'll visualize the decision boundaries of various classifier types.
 
 A subset of scikit-learn's built-in wine dataset is already loaded into X, along with binary labels in y.
