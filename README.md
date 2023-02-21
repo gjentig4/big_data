@@ -11,7 +11,6 @@ You will need to have the following installed on your computer:
 
 ### Load the Data
 
-if you ```do this``` it will hightlight only that
 
 ```
 # Import the Pandas library using the alias 'pd'
